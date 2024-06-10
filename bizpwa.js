@@ -9,6 +9,7 @@ else if (pathname.startsWith("/manage/admin")){
 window.progressierAppRuntimeSettings = {
   startUrl: startUrl,
 }
+console.log("test");
 
 let progressierScript = document.createElement("script");
 progressierScript.setAttribute("src", "https://progressier.app/tTD4oTBMz4ZuQAhT7HeQ/script.js");
