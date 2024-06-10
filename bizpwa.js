@@ -1,10 +1,10 @@
 let pathname = window.location.pathname;
 let startUrl = "";
 if (pathname.includes("/manage/agent")){
-  startUrl = "manage/agent";
+  startUrl = "version-test/manage/agent";
 }
 else if (pathname.includes("/manage/admin")){
-  startUrl = "manage/admin";
+  startUrl = "version-test/manage/agentmanage/admin";
 }
 window.progressierAppRuntimeSettings = {
   startUrl: startUrl,
