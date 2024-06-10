@@ -8,6 +8,7 @@ function preinitializeProgressier(){
     if (pathname.includes("/version-test")){
       config.name = "[DEV] REALGETs";
       config.shortName = "[DEV] REALGETs";
+      config.startUrl = window.location.pathname.slice(1, window.location.pathname.length);
     }
     window.progressierAppRuntimeSettings = config;
     let progressierScript = document.createElement("script");
@@ -15,4 +16,3 @@ function preinitializeProgressier(){
     document.querySelector("head").appendChild(progressierScript);
   }
   preinitializeProgressier();
-  
