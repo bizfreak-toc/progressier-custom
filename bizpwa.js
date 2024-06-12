@@ -9,6 +9,7 @@ function preinitializeProgressier(){
     config.name = "[検証環境] bizpwa";
     config.shortName = "[検証環境] bizpwa";
     config.startUrl = window.location.pathname.slice(1, window.location.pathname.length);
+    config.scope = "/version-test"
   }
   window.progressierAppRuntimeSettings = config;
   let progressierScript = document.createElement("script");
