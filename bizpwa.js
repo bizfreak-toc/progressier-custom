@@ -2,13 +2,13 @@ function preinitializeProgressier(){
   let pathname = window.location.pathname;
   let config = {};
   if (pathname.includes("/manage/agent")){
-    config.startUrl = window.location.pathname.slice(1, window.location.pathname.length);
+    config.startUrl = "version-test/manage/agent";
     config.icon512 = "https://pwa.xyz/v0/b/pwaa-8d87e.appspot.com/o/eWYX0PrgnbmJTIRgmYiH%2FiDWpnFeonBLfiQN.png?alt=media&token=7b7d4e52-4aac-46bc-bbe9-ece8bc6738f7";
-    config.scope = "version-test/manage/agent"
+    config.scope = "version-test/manage/agent";
   } else if (pathname.includes("/manage/admin")) {
-    config.startUrl = window.location.pathname.slice(1, window.location.pathname.length);
+    config.startUrl = "version-test/manage/admin";
     config.icon512 = "https://pwa.xyz/v0/b/pwaa-8d87e.appspot.com/o/eWYX0PrgnbmJTIRgmYiH%2FiDWpnFeonBLfiQN.png?alt=media&token=7b7d4e52-4aac-46bc-bbe9-ece8bc6738f7";
-    config.scope = "version-test/manage/admin"
+    config.scope = "version-test/manage/admin";
   }
   window.progressierAppRuntimeSettings = config;
   let progressierScript = document.createElement("script");
