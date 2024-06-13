@@ -8,8 +8,10 @@ function setConfig(config, basePath, scope, name, shortName) {
 
 function preinitializeProgressier() {
   let pathname = window.location.pathname;
+  console.log("pathname", pathname);
   let config = {};
   let basePath = pathname.includes("version-test") ? "version-test/" : "";
+  console.log("basePath", basePath);
   let namePrefix = basePath ? "[DEV] bizpwa" : "bizpwa";
   let shortNamePrefix = basePath ? "[DEV] bizpwa" : "bizpwa";
 
