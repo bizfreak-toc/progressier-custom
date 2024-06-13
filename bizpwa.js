@@ -17,6 +17,8 @@ function preinitializeProgressier() {
     setConfig(config, basePath, "manage/agent", namePrefix + " Agent", shortNamePrefix + " Agent");
   } else if (pathname.includes("manage/admin")) {
     setConfig(config, basePath, "manage/admin", namePrefix + " Admin", shortNamePrefix + " Admin");
+  } else {
+    setConfig(config, basePath, "", namePrefix, shortNamePrefix);
   }
 
   window.progressierAppRuntimeSettings = config;
