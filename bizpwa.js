@@ -1,7 +1,7 @@
 function setConfig(config, basePath, scope, name, shortName) {
-  config.startUrl = basePath + scope;
+  config.startUrl = scope;
   config.icon512 = "https://pwa.xyz/v0/b/pwaa-8d87e.appspot.com/o/eWYX0PrgnbmJTIRgmYiH%2FiDWpnFeonBLfiQN.png?alt=media&token=7b7d4e52-4aac-46bc-bbe9-ece8bc6738f7";
-  config.scope = basePath + scope;
+  config.scope = scope;
   config.name = name;
   config.shortName = shortName;
 }
