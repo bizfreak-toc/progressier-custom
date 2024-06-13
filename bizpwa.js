@@ -10,13 +10,13 @@ function preinitializeProgressier() {
   let pathname = window.location.pathname;
   let config = {};
   let basePath = pathname.includes("version-test") ? "version-test/" : "";
-  let name = basePath ? "[DEV] bizpwa" : "bizpwa";
-  let shortName = basePath ? "[DEV] bizpwa" : "bizpwa";
+  let namePrefix = basePath ? "[DEV] bizpwa" : "bizpwa";
+  let shortNamePrefix = basePath ? "[DEV] bizpwa" : "bizpwa";
 
   if (pathname.includes("manage/agent")) {
-    setConfig(config, basePath, "manage/agent", name, shortName);
+    setConfig(config, basePath, "manage/agent", namePrefix + " Agent", shortNamePrefix + " Agent");
   } else if (pathname.includes("manage/admin")) {
-    setConfig(config, basePath, "manage/admin", name, shortName);
+    setConfig(config, basePath, "manage/admin", namePrefix + " Admin", shortNamePrefix + " Admin");
   }
 
   window.progressierAppRuntimeSettings = config;
@@ -27,4 +27,3 @@ function preinitializeProgressier() {
 }
 
 preinitializeProgressier();
-
