@@ -1,6 +1,8 @@
-function setConfig(config, basePath, scope, name, shortName) {
+function setConfig(config, basePath, scope, name, shortName, changeIcon) {
   config.startUrl = basePath + scope;
-  config.icon512 = "https://pwa.xyz/v0/b/pwaa-8d87e.appspot.com/o/eWYX0PrgnbmJTIRgmYiH%2FiDWpnFeonBLfiQN.png?alt=media&token=7b7d4e52-4aac-46bc-bbe9-ece8bc6738f7";
+  if (changeIcon) {
+    config.icon512 = "https://pwa.xyz/v0/b/pwaa-8d87e.appspot.com/o/eWYX0PrgnbmJTIRgmYiH%2FiDWpnFeonBLfiQN.png?alt=media&token=7b7d4e52-4aac-46bc-bbe9-ece8bc6738f7";
+  }
   config.scope = basePath + scope;
   config.name = name;
   config.shortName = shortName;
@@ -8,19 +10,18 @@ function setConfig(config, basePath, scope, name, shortName) {
 
 function preinitializeProgressier() {
   let pathname = window.location.pathname;
-  console.log("pathname", pathname);
   let config = {};
   let basePath = pathname.includes("version-test") ? "version-test/" : "";
-  console.log("basePath", basePath);
-  let namePrefix = basePath ? "[DEV] bizpwa" : "bizpwa";
-  let shortNamePrefix = basePath ? "[DEV] bizpwa" : "bizpwa";
+  let name = basePath ? "[DEV] bizpwa" : "bizpwa";
+  let shortName = basePath ? "[DEV] bizpwa" : "bizpwa";
+  let changeIcon = pathname.includes("manage");
 
   if (pathname.includes("manage/agent")) {
-    setConfig(config, basePath, "manage/agent", namePrefix + " Agent", shortNamePrefix + " Agent");
+    setConfig(config, basePath, "manage/agent", name, shortName, changeIcon);
   } else if (pathname.includes("manage/admin")) {
-    setConfig(config, basePath, "manage/admin", namePrefix + " Admin", shortNamePrefix + " Admin");
+    setConfig(config, basePath, "manage/admin", name , shortName, changeIcon);
   } else {
-    setConfig(config, basePath, "", namePrefix, shortNamePrefix);
+    setConfig(config, basePath, "", name, shortName, changeIcon);
   }
 
   window.progressierAppRuntimeSettings = config;
