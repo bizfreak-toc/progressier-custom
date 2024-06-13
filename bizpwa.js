@@ -19,7 +19,7 @@ function preinitializeProgressier() {
   if (pathname.includes("manage/agent")) {
     setConfig(config, basePath, "manage/agent", name, shortName, changeIcon);
   } else if (pathname.includes("manage/admin")) {
-    setConfig(config, basePath, "manage/admin", name , shortName, changeIcon);
+    setConfig(config, basePath, "manage/admin", name, shortName, changeIcon);
   } else {
     setConfig(config, basePath, "", name, shortName, changeIcon);
   }
